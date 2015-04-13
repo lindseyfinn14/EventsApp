@@ -10,7 +10,7 @@ import Foundation
 
 class Event: PFObject, PFSubclassing
 {
-    override class func load()
+    override class func initialize()
     {
         self.registerSubclass()
     }
@@ -23,6 +23,8 @@ class Event: PFObject, PFSubclassing
     ///The title of the event
     @NSManaged var title : String!
     ///Details about the event
+    @NSManaged var date : NSDate!
+    //Details about the event
     @NSManaged var details : String!
     ///The profile of the user who created the event
     @NSManaged var host : Profile!
